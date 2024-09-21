@@ -1507,7 +1507,9 @@ func TestPagedQueryUsingIndex(t *testing.T) {
 		n := 10003
 		for i := 0; i < n; i++ {
 			doc := d.NewDocument()
-			doc.Set("timestamp", time.Now())
+
+			// Ensure unique timestamps by adding a small time offset (in nanoseconds)
+			doc.Set("timestamp", time.Now().Add(time.Duration(i)*time.Nanosecond))
 
 			if len(docs) == 1024 {
 				err := db.Insert("test", docs...)
