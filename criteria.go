@@ -4,7 +4,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ostafen/clover/encoding"
+	"github.com/xfp-881643/clover/encoding"
 )
 
 const (

@@ -15,7 +15,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	c "github.com/ostafen/clover"
+	c "github.com/xfp-881643/clover"
 )
 
 const (

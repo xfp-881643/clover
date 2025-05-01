@@ -5,8 +5,8 @@
 <h2 align="center">Lightweight document-oriented NoSQL Database</h2>
 
 [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)  
-[![Go Reference](https://pkg.go.dev/badge/badge/github.com/ostafen/clover.svg)](https://pkg.go.dev/github.com/ostafen/clover)
-[![Go Report Card](https://goreportcard.com/badge/github.com/ostafen/clover)](https://goreportcard.com/report/github.com/ostafen/clover)
+[![Go Reference](https://pkg.go.dev/badge/badge/github.com/xfp-881643/clover.svg)](https://pkg.go.dev/github.com/xfp-881643/clover)
+[![Go Report Card](https://goreportcard.com/badge/github.com/xfp-881643/clover)](https://goreportcard.com/report/github.com/xfp-881643/clover)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Coverage Status](https://coveralls.io/repos/github/ostafen/clover/badge.svg)](https://coveralls.io/github/ostafen/clover)
 [![Join the chat at https://gitter.im/cloverDB/community](https://badges.gitter.im/cloverDB/community.svg)](https://gitter.im/cloverDB/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -35,7 +35,7 @@ For there scenario, **CloverDB** may be a more suitable alternative.
 ## Installation
 Make sure you have a working Go environment (Go 1.13 or higher is required). 
 ```shell
-  GO111MODULE=on go get github.com/ostafen/clover
+  GO111MODULE=on go get github.com/xfp-881643/clover
 ```
 
 ## Databases and Collections
@@ -49,7 +49,7 @@ To store documents inside collections, you have to open a Clover database using 
 ```go
 import (
 	"log"
-	c "github.com/ostafen/clover"
+	c "github.com/xfp-881643/clover"
 )
 
 ...

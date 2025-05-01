@@ -10,7 +10,7 @@ import (
 	"time"
 
 	badger "github.com/dgraph-io/badger/v3"
-	"github.com/ostafen/clover/encoding"
+	"github.com/xfp-881643/clover/encoding"
 )
 
 var ErrDocumentNotExist = errors.New("no such document")

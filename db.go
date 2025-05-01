@@ -3,7 +3,7 @@ package clover
 import (
 	"errors"
 
-	uuid "github.com/satori/go.uuid"
+	nnid "github.com/matoous/go-nanoid/v2"
 )
 
 // Collection creation errors

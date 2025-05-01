@@ -5,8 +5,8 @@
 <h2 align="center">轻量级面向文档的NoSQL数据库</h2>
 
 [![Mentioned in Awesome Go](https://awesome.re/mentioned-badge.svg)](https://github.com/avelino/awesome-go)  
-[![Go Reference](https://pkg.go.dev/badge/badge/github.com/ostafen/clover.svg)](https://pkg.go.dev/github.com/ostafen/clover)
-[![Go Report Card](https://goreportcard.com/badge/github.com/ostafen/clover)](https://goreportcard.com/report/github.com/ostafen/clover)
+[![Go Reference](https://pkg.go.dev/badge/badge/github.com/xfp-881643/clover.svg)](https://pkg.go.dev/github.com/xfp-881643/clover)
+[![Go Report Card](https://goreportcard.com/badge/github.com/xfp-881643/clover)](https://goreportcard.com/report/github.com/xfp-881643/clover)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Coverage Status](https://coveralls.io/repos/github/ostafen/clover/badge.svg)](https://coveralls.io/github/ostafen/clover)
 [![Join the chat at https://gitter.im/cloverDB/community](https://badges.gitter.im/cloverDB/community.svg)](https://gitter.im/cloverDB/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
@@ -34,7 +34,7 @@
 ## 安装
 确保你拥有Go运行环境 (需要Go 1.13 或者更高版本)
 ```shell
-  GO111MODULE=on go get github.com/ostafen/clover
+  GO111MODULE=on go get github.com/xfp-881643/clover
 ```
 
 ## 数据库和集合
@@ -46,7 +46,7 @@ CloverDB将数据记录存储为JSON“文档”，这些“文档“被分组�
 ```go
 import (
 	"log"
-	c "github.com/ostafen/clover"
+	c "github.com/xfp-881643/clover"
 )
 
 ...
