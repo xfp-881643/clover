@@ -46,12 +46,11 @@ func (db *DB) HasCollection(name string) (bool, error) {
 }
 
 func NewObjectId() string {
-	return uuid.NewV4().String()
+	return nnid.Must()
 }
 
 func isValidObjectId(id string) bool {
-	_, err := uuid.FromString(id)
-	return err == nil
+	return len(id) == 21
 }
 
 // Insert adds the supplied documents to a collection.
