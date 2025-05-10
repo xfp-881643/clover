@@ -3,7 +3,6 @@ package clover_test
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"math/rand"
 	"os"
 	"path/filepath"
@@ -34,7 +33,7 @@ type TodoModel struct {
 }
 
 func runCloverTest(t *testing.T, jsonPath string, dataModel interface{}, test func(t *testing.T, db *c.DB)) {
-	dir, err := ioutil.TempDir("", "clover-test")
+	dir, err := os.MkdirTemp("", "clover-test")
 	require.NoError(t, err)
 
 	inMemDb, err := c.Open("", c.InMemoryMode(true))
@@ -213,7 +212,7 @@ func TestInsertAndGet(t *testing.T) {
 func loadFromJson(db *c.DB, filename string, model interface{}) error {
 	var objects []interface{}
 
-	data, err := ioutil.ReadFile(filename)
+	data, err := os.ReadFile(filename)
 	if err != nil {
 		return err
 	}
@@ -339,7 +338,7 @@ func TestInsertAndDelete(t *testing.T) {
 }
 
 func TestOpenExisting(t *testing.T) {
-	dir, err := ioutil.TempDir("", "clover-test")
+	dir, err := os.MkdirTemp("", "clover-test")
 	defer os.RemoveAll(dir)
 	require.NoError(t, err)
 
@@ -362,7 +361,7 @@ func TestOpenExisting(t *testing.T) {
 }
 
 func TestReloadIndex(t *testing.T) {
-	dir, err := ioutil.TempDir("", "clover-test")
+	dir, err := os.MkdirTemp("", "clover-test")
 	defer os.RemoveAll(dir)
 	require.NoError(t, err)
 
@@ -1220,7 +1219,7 @@ func TestListCollections(t *testing.T) {
 
 func TestExportAndImportCollection(t *testing.T) {
 	runCloverTest(t, todosPath, &TodoModel{}, func(t *testing.T, db *c.DB) {
-		exportPath, err := ioutil.TempDir("", "export-dir")
+		exportPath, err := os.MkdirTemp("", "export-dir")
 		require.NoError(t, err)
 		defer os.RemoveAll(exportPath)
 
