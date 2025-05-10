@@ -9,7 +9,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	badger "github.com/dgraph-io/badger/v3"
+	badger "github.com/dgraph-io/badger/v4"
 	"github.com/xfp-881643/clover/encoding"
 )
 
