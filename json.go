@@ -3,7 +3,6 @@ package clover
 import (
 	"bufio"
 	"encoding/json"
-	"io/ioutil"
 	"os"
 )
 
